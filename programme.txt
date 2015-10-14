@@ -1,0 +1,27 @@
+# Fichier de test
+# Les lignes de commentaires commencent par #
+#procedure principale()
+#  i = 12+3;
+#  si (i>14)
+#    j=1;
+#  finsi
+#finproc
+
+#test de l'instruction tant que
+#procedure principale()
+#  i=0;
+#  j=2;
+#  tantque (i<3)
+#    j=j+1;
+#    i=i+1;
+#  fintantque
+#finproc
+
+#test de l'instruction pour
+procedure principale()
+    j=0;
+  pour (i=0;i<5;i=i+1)
+    j=j+1;
+  finpour
+finproc  
+# Commentaire Final
