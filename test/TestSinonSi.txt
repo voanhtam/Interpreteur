@@ -1,0 +1,14 @@
+ 
+#test de l'instruction sinonsi
+#resultat attendu : i=6  ,j=3
+
+procedure principale()
+  i = 5+1;
+  si (i>14)
+    j=1;
+  sinonsi (i<10)
+    j=3;
+  sinon 
+    j=2;
+  finsi
+finproc 

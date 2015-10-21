@@ -1,0 +1,11 @@
+
+#test de l'instrucion lire
+#resultat attendu :
+
+procedure principale()
+
+
+
+
+
+finproc  

@@ -1,0 +1,12 @@
+ 
+#test de l'instruction sinon
+#resultat attendu : i=13, j=2
+
+procedure principale()
+  i = 12+1;
+  si (i>14)
+    j=1;
+  sinon
+    j=2;
+  finsi
+finproc

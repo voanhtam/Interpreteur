@@ -1,0 +1,12 @@
+
+#test de l'instrucion Ecrire
+#resultat attendu :
+
+procedure principale()
+
+
+
+
+
+finproc  
+

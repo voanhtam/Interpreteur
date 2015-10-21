@@ -1,0 +1,11 @@
+
+#test de l'instrucion repeter
+#resultat attendu : i= ,j= 
+
+procedure principale()
+
+
+
+
+
+finproc  

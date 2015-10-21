@@ -1,0 +1,9 @@
+#test de l'instrucion si
+#resultat attendu : i=15, j=1
+
+procedure principale()
+  i = 12+3;
+  si (i>14)
+    j=1;
+  finsi
+finproc

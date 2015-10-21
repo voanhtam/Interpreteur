@@ -71,12 +71,36 @@ int NoeudOperateurBinaire::executer() {
 // NoeudInstSi
 ////////////////////////////////////////////////////////////////////////////////
 
-NoeudInstSi::NoeudInstSi(Noeud* condition, Noeud* sequence)
-: m_condition(condition), m_sequence(sequence) {
+NoeudInstSi::NoeudInstSi(Noeud* condition, Noeud* sequence, Noeud* sinon,vector<Noeud *>sequence_sinonsi,vector<Noeud *>condition_sinonsi)
+: m_condition(condition), m_sequence(sequence), seq_sinon(sinon), m_condi_sinonsi(condition_sinonsi), m_seq_sinonsi(sequence_sinonsi) {
 }
 
 int NoeudInstSi::executer() {
-  if (m_condition->executer()) m_sequence->executer();
+    bool si;
+    bool sinon;
+  if (m_condition->executer()){
+      m_sequence->executer();
+      si=true;
+  }
+  else if(m_condi_sinonsi.size()>0 && m_seq_sinonsi.size()>0){
+    int i=0;
+    while(i<m_condi_sinonsi.size()){
+            if(m_condi_sinonsi.at(i)->executer()){
+                m_seq_sinonsi.at(i)->executer();
+                sinon = true;
+                
+            i=m_condi_sinonsi.size();
+            }
+            else
+             i++;
+    }
+    
+    
+  }
+      if(!si && !sinon )
+    seq_sinon->executer();
+  
+ 
   return 0; // La valeur renvoyée ne représente rien !
 }
 
@@ -86,7 +110,10 @@ NoeudInstTantQue::NoeudInstTantQue(Noeud* condition, Noeud* sequence)
 }
 
 int NoeudInstTantQue::executer(){
- while (m_condition->executer()) m_sequence->executer();
+ while (m_condition->executer()) 
+     m_sequence->executer();
+ 
+ 
   return 0; // La valeur renvoyée ne représente rien !
 }
 

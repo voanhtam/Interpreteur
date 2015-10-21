@@ -1,0 +1,10 @@
+
+#test de l'instrucion pour
+#resultat attendu : i=5, j=5
+
+procedure principale()
+    j=0;
+  pour (i=0;i<5;i=i+1)
+    j=j+1;
+  finpour
+finproc  
